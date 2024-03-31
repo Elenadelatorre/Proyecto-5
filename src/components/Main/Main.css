@@ -38,7 +38,7 @@
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url('./assets/3enlinea.png') no-repeat;
+    url(../3enlinea.png) no-repeat;
   background-size: cover;
 }
 
@@ -47,7 +47,7 @@
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url('./assets/Bingo.png') no-repeat;
+    url(../Bingo.png) no-repeat;
   background-size: cover;
 }
 
@@ -56,7 +56,7 @@
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url('./assets/numeros.png') no-repeat;
+    url(../numeros.png) no-repeat;
   background-size: cover;
 }
 
