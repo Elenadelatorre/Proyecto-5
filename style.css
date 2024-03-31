@@ -58,6 +58,7 @@ body {
   flex-wrap: wrap;
   gap: var(--pc-gap-s);
 }
+
 .buttonRestart {
   margin: 0 auto;
   background-color: white;
