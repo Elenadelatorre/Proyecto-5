@@ -13,21 +13,21 @@ export const printMain = () => {
   tresEnRayaButton.addEventListener('click', () => {
     changeToGame01();
   });
-  const bingoButton = document.querySelector('.gameButton02'); // Selecciona el botón del juego 2
+  const bingoButton = document.querySelector('.gameButton02');
   bingoButton.addEventListener('click', () => {
-    changeToGame02(); // Llama a la función que imprime el juego 2
+    changeToGame02();
   });
-  const numeroButton = document.querySelector('.gameButton03'); // Selecciona el botón del juego 2
+  const numeroButton = document.querySelector('.gameButton03');
   numeroButton.addEventListener('click', () => {
-    changeToGame03(); // Llama a la función que imprime el juego 2
+    changeToGame03();
   });
 };
 const changeToGame01 = () => {
   printGame01();
 };
 const changeToGame02 = () => {
-  printGame02(); // Llama a la función que imprime el juego 2
+  printGame02();
 };
 const changeToGame03 = () => {
-  printGame03(); // Llama a la función que imprime el juego 2
+  printGame03();
 };

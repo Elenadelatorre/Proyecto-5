@@ -20,7 +20,7 @@ h1 {
   letter-spacing: 2px;
   font-weight: 700;
   color: #ff96ad;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(255, 150, 173, 0.5);
 }
 
 @media screen and (max-width: 580px) {

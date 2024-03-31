@@ -4,114 +4,109 @@
   left: 50%;
   transform: translate(-50%, -50%);
   gap: 20px;
-  flex-direction: column; /* Cambiamos la dirección del flex a columna */
+  flex-direction: column;
 }
 
 #bingoBoard {
   display: flex;
   justify-content: center;
-  align-items: center; /* Centrar verticalmente */
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .bingo-board {
   display: flex;
 }
+
 .bingo-column {
   display: flex;
   flex-direction: column;
 }
+
 .bingo-cell {
   border: 1px solid #333;
   padding: 20px;
   font-size: 24px;
-  background-color: #fff;
+  background-color: var(--pc-color-white);
 }
 
 .bingo-cell.marked {
-  background-color: #66ff66; /* Color de fondo para los números marcados */
+  background-color: #66ff66;
 }
+
 #callNumberBtn {
-  display: block; /* Hacemos que el botón se comporte como un bloque */
-  margin: 0 auto; /* Centramos el botón horizontalmente */
+  display: block;
+  margin: 0 auto;
 }
+
 #calledNumberDisplay {
-  font-size: 18px;
-  margin-bottom: 20px; /* Agregamos espacio entre el área de visualización y el botón */
+  font-size: 25px;
+  margin-bottom: var(--pc-margin-m);
 }
 
 button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #ff66b3;
-  color: #fff;
+  background-color: var(--pc-color-pinkDark);
+  color: var(--pc-color-white);
   border: none;
   border-radius: 5px;
-  margin: 5px;
+  margin: var(--pc-margin-xs);
 }
 
 button:hover {
-  background-color: #ff99cc; /* Color de fondo del botón al pasar el ratón */
+  background-color: var(--pc-color-pink);
 }
 
 #calledNumbersGrid {
   display: flex;
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en líneas si no caben en una sola fila */
-  justify-content: center; /* Centrar los elementos horizontalmente */
+  flex-wrap: wrap;
+  justify-content: center;
   min-width: 400px;
 }
 
 #calledNumbersGrid > div {
   border: 1px solid #333;
-
-  padding: 5px;
+  padding: var(--pc-padding-xs);
   margin: 1px;
   font-size: 13px;
 }
 
 @media screen and (max-width: 950px) {
   #bingoBoard {
-    margin-top: 30px;
-    margin-bottom: 10px; /* Reducir el margen inferior del tablero */
+    margin-top: var(--pc-margin-l);
+    margin-bottom: var(--pc-margin-s);
   }
 
   .bingo-cell {
-    padding: 20px; /* Reducir el padding de las celdas del tablero */
-    font-size: 20px; /* Reducir el tamaño de fuente de las celdas del tablero */
+    padding: var(--pc-padding-m);
+    font-size: 20px;
   }
 
   #calledNumberDisplay {
-    font-size: 18px; /* Reducir el tamaño de fuente del área de visualización de números llamados */
-    margin-bottom: 10px; /* Reducir el margen inferior del área de visualización de números llamados */
+    font-size: 18px;
+    margin-bottom: var(--pc-margin-s);
   }
 
   #calledNumbersGrid > div {
-    padding: 5px; /* Reducir el padding de los números llamados */
-    margin: 0; /* Eliminar el margen de los números llamados */
-    font-size: 12px; /* Reducir el tamaño de fuente de los números llamados */
+    padding: var(--pc-padding-xs);
+    margin: 0;
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 819px) {
   #bingoBoard {
-    margin-top: 30px;
-    margin-bottom: 5px; /* Reducir el margen inferior del tablero */
+    margin-bottom: var(--pc-margin-xs);
   }
 
   .bingo-cell {
-    padding: 15px; /* Reducir el padding de las celdas del tablero */
-    font-size: 18px; /* Reducir el tamaño de fuente de las celdas del tablero */
-  }
-
-  #calledNumberDisplay {
-    font-size: 18px; /* Reducir el tamaño de fuente del área de visualización de números llamados */
-    margin-bottom: 10px; /* Reducir el margen inferior del área de visualización de números llamados */
+    padding: 15px;
+    font-size: 18px;
   }
 
   #calledNumbersGrid > div {
-    padding: 5px; /* Reducir el padding de los números llamados */
-    margin: 0; /* Eliminar el margen de los números llamados */
-    font-size: 10px; /* Reducir el tamaño de fuente de los números llamados */
+    font-size: 10px;
   }
 }

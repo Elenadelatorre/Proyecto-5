@@ -5,7 +5,7 @@ export const printGame01 = () => {
   document.querySelector(
     '#containerGames'
   ).innerHTML = `<button id="buttonMenu">MENÚ</button>
-    <div id="playerSelection">
+    <div id="playerSelection" class="flex-container" >
       <button id="playerX">Empieza ❌</button>
       <button id="playerO">Empieza ✅</button>
     </div>
@@ -18,21 +18,17 @@ export const printGame01 = () => {
     </div>
   `;
 
-  // Agrega un event listener al botón MENÚ
+  // Agregar un event listener al botón "Menú":
   const menuButton = document.querySelector('#buttonMenu');
-  menuButton.addEventListener('click', () => {
-    printMain();
-  });
+  menuButton.addEventListener('click', printMain);
 
+  //Ocultar el tablero y el botón de reiniciar el juego:
   const board = document.querySelector('#board');
-  const message = document.querySelector('.message');
   const buttonRestart = document.querySelector('#buttonRestart');
-
-  // Ocultar el tablero y el mensaje al principio
   board.style.display = 'none';
-  //message.style.display = 'none';
   buttonRestart.style.display = 'none';
 
+  // Agregar un event listener a los botones de selección de jugador:
   const playerXButton = document.querySelector('#playerX');
   const playerOButton = document.querySelector('#playerO');
 
@@ -46,29 +42,35 @@ export const printGame01 = () => {
 
   createBoard();
 
+  // Agregar un event listener al botón de reinicio:
   const restartButton = document.querySelector('#buttonRestart');
   restartButton.addEventListener('click', resetGame);
 };
 
+//Crear el juego:
+//Asignar valor a las variables:
 let currentPlayer = '❌';
 let boardState = ['', '', '', '', '', '', '', '', ''];
 let gameActive = true;
 
+//Crear la función "startGame" para iniciar el juego:
 function startGame(startingPlayer) {
   currentPlayer = startingPlayer;
   gameActive = true;
 
   const playerSelection = document.querySelector('#playerSelection');
   const board = document.querySelector('#board');
-
+  const message = document.querySelector('#message');
   const buttonRestart = document.querySelector('#buttonRestart');
 
-  // Mostrar el tablero y el mensaje después de elegir el jugador
+  // Mostrar el tablero y el botón "reiniciar" y ocultar el mensaje y después de elegir el jugador:
   playerSelection.style.display = 'none';
   board.style.display = 'grid';
-
+  message.style.display = 'none';
   buttonRestart.style.display = 'block';
 }
+
+//Crear la función "checkWinner" para comprobar el ganador:
 function checkWinner() {
   const winningCombinations = [
     [0, 1, 2],
@@ -99,6 +101,7 @@ function checkWinner() {
   return null;
 }
 
+//Crear la función "handleCellClick" para manejar el clic en las celdas del tablero:
 function handleCellClick(event) {
   const cellIndex = event.target.dataset.index;
 
@@ -114,12 +117,14 @@ function handleCellClick(event) {
       } else {
         message.textContent = `¡Ha ganado ${winner}!`;
       }
+      message.style.display = 'block';
     } else {
       currentPlayer = currentPlayer === '❌' ? '✅' : '❌';
     }
   }
 }
 
+//Crear la función "createBoard" para crear el tablero:
 function createBoard() {
   const board = document.querySelector('#board');
 
@@ -132,16 +137,19 @@ function createBoard() {
   }
 }
 
+//Crear la función "resetGame" para restablecer el juego:
 function resetGame() {
-  // Restablece el estado del juego a su estado inicial
+  // Restablecer el estado del juego a su estado inicial.
   currentPlayer = '❌';
   boardState = ['', '', '', '', '', '', '', '', ''];
   gameActive = true;
 
-  // Limpia el contenido del tablero y del mensaje
+  // Limpiar el contenido del tablero y del mensaje.
   const cells = document.querySelectorAll('.cell');
   cells.forEach((cell) => {
     cell.textContent = '';
   });
+  const message = document.querySelector('#message');
   message.textContent = '';
+  message.style.display = 'none';
 }

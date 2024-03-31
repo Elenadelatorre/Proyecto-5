@@ -19,18 +19,13 @@
   width: 30%;
   height: 70%;
   border-radius: 10px;
-  padding: var(--rtc--padding-m);
+  padding: var(--pc-padding-m);
   border: 2px solid rgba(0, 0, 0, 0.5);
 }
 #game01:hover,
 #game02:hover,
 #game03:hover {
-  background-color: rgba(
-    255,
-    153,
-    204,
-    0.5
-  ); /* Cambia el color rosa al pasar el ratón */
+  background-color: rgba(255, 153, 204, 0.5);
 }
 
 #game01 {
@@ -64,32 +59,31 @@ article button {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ff99cc;
+  background-color: var(--pc-color-pink);
   color: white;
   padding: 10px 20px;
-  border: 2px solid #ff66b3;
+  border: 2px solid var(--pc-color-pinkDark);
   border-radius: 4px;
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
-  -webkit-border-radius: 4px;
 }
 
 article button:hover {
-  background-color: #ff66b3; /* Rosa más claro al pasar el ratón */
+  background-color: var(--pc-color-pinkDark);
 }
 
 @media screen and (max-width: 768px) {
   header,
   footer {
-    position: static; /* Cambia el posicionamiento a estático para que floten en el flujo del documento en pantallas más pequeñas */
+    position: static;
   }
 
   #containerGames {
-    margin-top: 20px; /* Reduce el margen superior para dejar más espacio en pantallas más pequeñas */
-    margin-bottom: 20px;
-    padding: 50px; /* Reduce el margen inferior para dejar más espacio en pantallas más pequeñas */
+    margin-top: var(--pc-margin-m);
+    margin-bottom: var(--pc-margin-m);
+    padding: var(--pc-padding-xl);
   }
 }

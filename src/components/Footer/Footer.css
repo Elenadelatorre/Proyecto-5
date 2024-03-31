@@ -8,10 +8,10 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #333;
-  color: #ffff;
+  color: var(--pc-color-white);
 }
 
 .copyright {
   font-size: 15px;
-  margin: 5px;
+  margin: var(--pc-margin-xs);
 }

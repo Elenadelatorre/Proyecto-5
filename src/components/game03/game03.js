@@ -23,16 +23,17 @@ export const printGame03 = () => {
   });
 
   const buttonRestart = document.querySelector('#buttonRestart');
+  buttonRestart.addEventListener('click', iniciarJuego);
 
   let numeroAdivinar;
   let intentos;
 
-  // Genera un número aleatorio entre min y max (inclusive)
+  // Crear la función "generarNumeroAleatorio" para generar un número aleatorio entre min y max:
   function generarNumeroAleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  // Inicializa el juego
+  // Crear la función "iniciarJuego" para iniciar el juego:
   function iniciarJuego() {
     numeroAdivinar = generarNumeroAleatorio(1, 100);
     intentos = 0;
@@ -42,19 +43,17 @@ export const printGame03 = () => {
     document.getElementById('numeroInput').value = '';
   }
 
-  // Función principal del juego
+  // Crear la función "adivinaNumero" para adivinar el número:
   function adivinaNumero() {
-    // Obtener el número ingresado por el usuario
     let numeroUsuario = parseInt(document.getElementById('numeroInput').value);
-    // Incrementar el contador de intentos
     intentos++;
+
     if (isNaN(numeroUsuario)) {
-      // Mostrar mensaje de error y salir de la función
       document.querySelector('.messageNum').innerText =
         'No se ha introducido ningún número.';
       return;
     }
-    // Verificar si el número ingresado es correcto
+
     if (numeroUsuario === numeroAdivinar) {
       const winMessage = document.querySelector('#winMessage03');
       winMessage.innerText = `¡Has acertado el número en ${intentos} intentos!`;
@@ -68,15 +67,9 @@ export const printGame03 = () => {
     }
   }
 
-  // Iniciar el juego cuando se carga la página
   document
     .querySelector('#adivinarBtn')
     .addEventListener('click', adivinaNumero);
-  // Agregar un listener de eventos al botón de reinicio
-
-  buttonRestart.addEventListener('click', iniciarJuego);
 
   iniciarJuego();
-
-  // Agregar un listener de eventos al botón
 };

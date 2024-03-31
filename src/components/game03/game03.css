@@ -1,27 +1,24 @@
 #numGame {
   flex-direction: column;
   margin-top: 50px;
-  gap: 20px;
+  gap: var(--pc-gap-m);
 }
 
-/* Estilos para los elementos de entrada y botones */
 input[type='number'],
 button {
-  padding: 15px; /* Aumenta el padding */
-  border-radius: 8px; /* Agrega esquinas redondeadas */
-  border: 2px solid #ccc; /* Agrega un borde */
-  font-size: 18px; /* Tamaño de fuente */
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 18px;
   width: 200px;
 }
-
-/* Estilos para el mensaje de número */
 
 .firstMessage {
   font-weight: bold;
   margin-top: 20px;
   font-size: 40px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--pc-margin-m);
 }
 
 .messageNum {
@@ -35,12 +32,11 @@ button {
   left: 50%;
   transform: translateX(-50%);
   font-size: 50px;
-  color: #ffff;
+  color: var(--pc-color-white);
   animation: slideIn 1s ease forwards;
   opacity: 0;
-  padding: 20px;
+  padding: var(--pc-padding-m);
   white-space: nowrap;
-
   background-color: rgba(255, 153, 204, 0.9);
 }
 @keyframes slideIn {
