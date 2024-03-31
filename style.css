@@ -1,0 +1,147 @@
+/* GLOBAL STYLES */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: var(--pc-primary-font);
+}
+
+:root {
+  /* COLORS */
+  --pc-color-1: #f2f2f2;
+  --pc-color-2: #674809;
+  --pc-color-3: #1c1402;
+
+  --pc-bgColor: var(--pc-color-1);
+  --pc-special-color: var(--pc-color-2);
+  --pc-textColor: var(--pc-color-3);
+
+  /* FONTS */
+  --pc-primary-font: 'Lato', sans-serif;
+  --pc-highlight-font: 'Anton', sans-serif;
+
+  /* SPACINGS */
+  --pc-margin-xs: 5px;
+  --pc-margin-s: 10px;
+  --pc-margin-m: 20px;
+  --pc-margin-l: 30px;
+  --pc-margin-xl: 50px;
+
+  --pc-padding-xs: 5px;
+  --pc-padding-s: 10px;
+  --pc-padding-m: 20px;
+  --pc-padding-l: 30px;
+  --pc-padding-xl: 50px;
+
+  --pc-gap-xs: 5px;
+  --pc-gap-s: 10px;
+  --pc-gap-m: 20px;
+  --pc-gap-l: 30px;
+  --pc-gap-xl: 50px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--pc-gap-s);
+}
+.buttonRestart {
+  margin: 0 auto;
+  background-color: white;
+  color: #ff99cc;
+  padding: 15px;
+  border: 2px solid #ff66b3;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+#buttonMenu {
+  position: absolute;
+  top: 0;
+  left: 8em;
+
+  transform: translateX(-50%);
+  background-color: white;
+  color: #ff99cc;
+  padding: 10px 20px;
+  border: 2px solid #ff66b3;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+article button:hover {
+  background-color: #ff66b3; /* Rosa más claro al pasar el ratón */
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 70px;
+  color: #ffff;
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+  padding: 20px;
+}
+.message::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    153,
+    204,
+    0.9
+  ); /* Cambia la opacidad según lo desees */
+  z-index: -1;
+}
+
+.message:empty::before {
+  content: none; /* Oculta el cuadro rosa cuando el mensaje está oculto */
+}
+@keyframes slideIn {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: calc(50% - 50px);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .message {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .message {
+    font-size: 45px;
+  }
+}

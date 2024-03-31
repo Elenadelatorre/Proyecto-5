@@ -1,0 +1,71 @@
+#numGame {
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+/* Estilos para los elementos de entrada y botones */
+input[type='number'],
+button {
+  padding: 15px; /* Aumenta el padding */
+  border-radius: 8px; /* Agrega esquinas redondeadas */
+  border: 2px solid #ccc; /* Agrega un borde */
+  font-size: 18px; /* Tamaño de fuente */
+  width: 200px;
+}
+
+/* Estilos para el mensaje de número */
+
+.firstMessage {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.messageNum {
+  font-size: 30px;
+  text-align: center;
+}
+
+#winMessage03 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  color: #ffff;
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+  padding: 20px;
+  white-space: nowrap;
+
+  background-color: rgba(255, 153, 204, 0.9);
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  #winMessage03 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 745px) {
+  #numGame,
+  .firstMessage {
+    margin-top: 0px;
+  }
+  #winMessage03 {
+    font-size: 1.3em;
+  }
+}

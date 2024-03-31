@@ -1,0 +1,95 @@
+#containerGames {
+  overflow: auto;
+  position: absolute;
+  top: 110px;
+  z-index: 1;
+  width: 100%;
+  height: 82svh;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--pc-gap-l);
+  padding: 100px;
+}
+
+#game01,
+#game02,
+#game03 {
+  position: relative;
+  min-width: 300px;
+  width: 30%;
+  height: 70%;
+  border-radius: 10px;
+  padding: var(--rtc--padding-m);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+#game01:hover,
+#game02:hover,
+#game03:hover {
+  background-color: rgba(
+    255,
+    153,
+    204,
+    0.5
+  ); /* Cambia el color rosa al pasar el ratón */
+}
+
+#game01 {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url('./assets/3enlinea.png') no-repeat;
+  background-size: cover;
+}
+
+#game02 {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url('./assets/Bingo.png') no-repeat;
+  background-size: cover;
+}
+
+#game03 {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url('./assets/numeros.png') no-repeat;
+  background-size: cover;
+}
+
+article button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff99cc;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid #ff66b3;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  -webkit-border-radius: 4px;
+}
+
+article button:hover {
+  background-color: #ff66b3; /* Rosa más claro al pasar el ratón */
+}
+
+@media screen and (max-width: 768px) {
+  header,
+  footer {
+    position: static; /* Cambia el posicionamiento a estático para que floten en el flujo del documento en pantallas más pequeñas */
+  }
+
+  #containerGames {
+    margin-top: 20px; /* Reduce el margen superior para dejar más espacio en pantallas más pequeñas */
+    margin-bottom: 20px;
+    padding: 50px; /* Reduce el margen inferior para dejar más espacio en pantallas más pequeñas */
+  }
+}
