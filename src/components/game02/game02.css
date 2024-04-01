@@ -3,15 +3,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  gap: 20px;
+  gap: 15px;
   flex-direction: column;
+
+  margin-bottom: 100px;
 }
 
 #bingoBoard {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .bingo-board {
@@ -41,7 +43,7 @@
 
 #calledNumberDisplay {
   font-size: 25px;
-  margin-bottom: var(--pc-margin-m);
+  margin-bottom: var(--pc-margin-xs);
 }
 
 button {
@@ -97,6 +99,10 @@ button:hover {
 }
 
 @media screen and (max-width: 819px) {
+  #bingoGame {
+    top: 50%;
+  }
+
   #bingoBoard {
     margin-bottom: var(--pc-margin-xs);
   }
@@ -109,4 +115,7 @@ button:hover {
   #calledNumbersGrid > div {
     font-size: 10px;
   }
+}
+
+@media screen and (max-width: 500px) {
 }

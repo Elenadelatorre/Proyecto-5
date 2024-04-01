@@ -47,6 +47,10 @@ body {
   background-color: #f5f5f5;
 }
 
+main {
+  margin-bottom: 50px; /* Ajusta el valor según sea necesario */
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
