@@ -130,4 +130,10 @@ main {
   .message {
     font-size: 45px;
   }
+  #buttonMenu {
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 450px) {
 }

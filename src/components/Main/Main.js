@@ -11,23 +11,14 @@ export const printMain = () => {
 
   const tresEnRayaButton = document.querySelector('.gameButton01');
   tresEnRayaButton.addEventListener('click', () => {
-    changeToGame01();
+    printGame01();
   });
   const bingoButton = document.querySelector('.gameButton02');
   bingoButton.addEventListener('click', () => {
-    changeToGame02();
+    printGame02();
   });
   const numeroButton = document.querySelector('.gameButton03');
   numeroButton.addEventListener('click', () => {
-    changeToGame03();
+    printGame03();
   });
-};
-const changeToGame01 = () => {
-  printGame01();
-};
-const changeToGame02 = () => {
-  printGame02();
-};
-const changeToGame03 = () => {
-  printGame03();
 };

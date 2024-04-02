@@ -15,7 +15,6 @@
 #game02,
 #game03 {
   position: relative;
-
   min-width: 300px;
   width: 30%;
   height: 70%;
@@ -85,7 +84,8 @@ article button:hover {
   #containerGames {
     margin-top: var(--pc-margin-m);
     margin-bottom: var(--pc-margin-m);
-    padding: var(--pc-padding-l);
+    padding-left: var(--pc-padding-xl);
+    padding-right: var(--pc-padding-xl);
   }
 
   #game01,
